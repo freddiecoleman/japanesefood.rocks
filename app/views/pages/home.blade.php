@@ -7,10 +7,10 @@
   </div>
   <table class="table" ng-controller="CitiesCtrl as city">
       <tr>
-          <th>Name</th>
-          <th>Population</th>
+          <th ng-click="predicate='name'">Name</th>
+          <th ng-click="predicate='population'">Population</th>
       </tr>
-      <tr ng-repeat="city in cities">
+      <tr ng-repeat="city in cities | orderBy:predicate">
           <td>@{{ city.name }}</td>
           <td>@{{ city.population }}</td>
       </tr>
