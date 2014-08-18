@@ -9,9 +9,9 @@ class CityRepository {
     }
 
 
-    public function all(City $city)
+    public function all()
     {
-        return $city->all();
+        return City::all();
     }
 
 }
