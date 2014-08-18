@@ -20,11 +20,11 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+        "psr-4": {
+            "Japan\\": "app/Japan"
+        }
 	},
-    "psr-4": {
-      "Japan\\": "app/Japan"
-    },
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
