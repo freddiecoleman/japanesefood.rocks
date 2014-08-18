@@ -11,7 +11,7 @@ class CitiesTableSeeder extends Seeder {
 
         foreach (range(1, 10) as $index)
         {
-            Status::create([
+            City::create([
                 'name'       => $faker->city,
                 'population' => $faker->numberBetween(1000000, 100000000),
                 'created_at' => $faker->dateTime()
