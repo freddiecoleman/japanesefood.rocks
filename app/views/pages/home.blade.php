@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="jumbotron">
-    <h1>Welcome to my app!</h1>
-    <p>test..1 + 1 = @{{ 1 + 1 }}</p>
+    <h1>Cities of Japan</h1>
+    <p>Info about the cities will be here.. you can order them and stuff... yeah AngularJS is kind of cool like that...</p>
   </div>
   <table class="table" ng-controller="CitiesCtrl as city">
       <tr>
