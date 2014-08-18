@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Larabook\Cities\City;
+use Japan\Cities\City;
 
 class CitiesTableSeeder extends Seeder {
 
