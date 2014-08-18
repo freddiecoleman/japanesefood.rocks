@@ -8,7 +8,6 @@ class CityRepository {
         return $city->save();
     }
 
-
     public function all()
     {
         return City::all();
