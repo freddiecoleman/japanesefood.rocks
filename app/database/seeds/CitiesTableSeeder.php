@@ -9,7 +9,7 @@ class CitiesTableSeeder extends Seeder {
     {
         $faker = Faker::create();
 
-        foreach (range(1, 10) as $index)
+        foreach (range(1, 100) as $index)
         {
             City::create([
                 'name'       => $faker->city,
