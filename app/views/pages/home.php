@@ -78,7 +78,7 @@
           <tr ng-repeat="city in cities | orderBy:predicate | filter:cityName">
               <td><img ng-src="/images/{{ city.thumbnail }}"></td>
               <td>{{ city.name }}</td>
-              <td>{{ city.population }}</td>
+              <td>{{ city.population | number }}</td>
           </tr>
         </table>
   </div>
