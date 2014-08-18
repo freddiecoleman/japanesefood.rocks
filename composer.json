@@ -6,6 +6,12 @@
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
+    "require-dev": {
+        "laracasts/testdummy": "~1.0",
+        "fzaninotto/faker": "1.4.*",
+        "phpunit/phpunit": "3.7.*",
+        "mockery/mockery": "0.7.*"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -16,6 +22,9 @@
 			"app/tests/TestCase.php"
 		]
 	},
+    "psr-4": {
+      "Japan\\": "app/Japan"
+    },
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
