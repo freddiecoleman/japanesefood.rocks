@@ -70,10 +70,12 @@
       </div>
       <table class="table" ng-controller="CitiesCtrl as city">
           <tr>
+              <th>Pic</th>
               <th ng-click="predicate='name'">Name</th>
               <th ng-click="predicate='population'">Population</th>
           </tr>
           <tr ng-repeat="city in cities | orderBy:predicate">
+              <td><img ng-src="/images/{{ city.thumbnail }}"></td>
               <td>{{ city.name }}</td>
               <td>{{ city.population }}</td>
           </tr>
