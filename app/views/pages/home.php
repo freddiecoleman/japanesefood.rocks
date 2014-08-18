@@ -74,8 +74,8 @@
               <th ng-click="predicate='population'">Population</th>
           </tr>
           <tr ng-repeat="city in cities | orderBy:predicate">
-              <td>@{{ city.name }}</td>
-              <td>@{{ city.population }}</td>
+              <td>{{ city.name }}</td>
+              <td>{{ city.population }}</td>
           </tr>
         </table>
   </div>
