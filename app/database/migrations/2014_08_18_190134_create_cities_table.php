@@ -18,6 +18,7 @@ class CreateCitiesTable extends Migration {
 
             $table->string('name');
             $table->integer('population');
+            $table->string('thumbnail');
 
             $table->timestamps();
 		});

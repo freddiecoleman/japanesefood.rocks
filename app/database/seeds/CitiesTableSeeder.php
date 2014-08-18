@@ -14,6 +14,7 @@ class CitiesTableSeeder extends Seeder {
             City::create([
                 'name'       => $faker->city,
                 'population' => $faker->numberBetween(1000000, 100000000),
+                'thumbnail'  => rand(1, 3) . '.jpg',
                 'created_at' => $faker->dateTime()
             ]);
         }
