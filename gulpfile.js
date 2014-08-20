@@ -5,6 +5,5 @@ var gulp = require('gulp'),
 gulp.task('css', function() {
     gulp.src('app/Japan/Layout/scss/bootstrap.scss')
         .pipe(sass())
-        .pipe(gulp.dest('public/css'))
-        .pipe(rename('bootstrap.min.css'));
+        .pipe(gulp.dest('public/css'));
 });
