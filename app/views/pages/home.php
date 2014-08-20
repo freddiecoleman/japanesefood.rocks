@@ -22,7 +22,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-5">
               <h3>Cities</h3>
               <table class="table" ng-controller="CitiesCtrl as city">
                   <tr>
@@ -30,16 +30,32 @@
                       <th ng-click="predicate='name'">Name</th>
                       <th ng-click="predicate='population'">Population</th>
                   </tr>
-                  <tr ng-repeat="city in cities | orderBy:predicate | filter:cityName">
+                  <tr ng-repeat="city in cities | orderBy:predicate | filter:cityName" ng-click="select(city)">
                       <td><img ng-src="/images/{{ city.thumbnail }}"></td>
                       <td>{{ city.name }}</td>
                       <td>{{ city.population | number }}</td>
                   </tr>
               </table>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-7">
               <h3>Info</h3>
-
+              <div ng-controller="SelectedCtrl as info">
+                  <table class="table">
+                      <td>
+                        <td colspan="2">
+                          <img ng-src="/images/{{ selected.thumbnail }}">
+                        </td>
+                      </td>
+                      <tr>
+                          <td>Name</td>
+                          <td>{{ selected.name }}</td>
+                      </tr>
+                      <tr>
+                          <td>Population</td>
+                          <td>{{ selected.population }}</td>
+                      </tr>
+                  </table>
+              </div>
           </div>
       </div>
 
