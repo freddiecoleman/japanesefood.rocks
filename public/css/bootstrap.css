@@ -1708,7 +1708,7 @@ pre {
     margin-left: 100%; } }
 
 table {
-  background-color: transparent; }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 th {
   text-align: left; }
