@@ -1,13 +1,14 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass');;
+    sass = require('gulp-sass'),
+    rename = require('gulp-rename');
 
 gulp.task('default', function() {
 
     gulp.task('css', function() {
-        gulp.src('app/Japan/Layout/scss')
+        gulp.src('app/Japan/Layout/scss/bootstrap.scss')
             .pipe(sass())
-            .pipe(autoprefixer('last 10 version'))
-            .pipe(gulp.dest('public/css'));
+            .pipe(gulp.dest('public/css'))
+            .pipe(rename('bootstrap.min.css'));
     });
 
 });
