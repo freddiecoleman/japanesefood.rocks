@@ -15,22 +15,22 @@
   <div class="container">
       <div class="row">
           <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Search..." ng-model="cityName">
+              <input type="text" class="form-control" placeholder="Search..." ng-model="searchBox">
           </div>
       </div>
       <div class="row">
           <div class="col-md-5 city-list">
               <h3>Flavours</h3>
-              <table class="table" ng-controller="CitiesCtrl as city">
+              <table class="table" ng-controller="FlavoursCtrl as flavour">
                   <tr>
                       <th>Pic</th>
                       <th ng-click="predicate='name'">Flavour</th>
-                      <th ng-click="predicate='population'">City</th>
+                      <th ng-click="predicate='city'">City</th>
                   </tr>
-                  <tr ng-repeat="city in cities | orderBy:predicate | filter:cityName" ng-click="select(city)">
-                      <td><img ng-src="/images/{{ city.thumbnail }}"></td>
-                      <td>{{ city.name }}</td>
-                      <td>{{ city.population | number }}</td>
+                  <tr ng-repeat="flavour in flavours | orderBy:predicate | filter:searchBox" ng-click="select(flavour)">
+                      <td><img ng-src="/images/{{ flavour.thumbnail }}"></td>
+                      <td>{{ flavour.name }}</td>
+                      <td>{{ flavour.city_id | number }}</td>
                   </tr>
               </table>
           </div>
@@ -48,8 +48,8 @@
                           <td>{{ selected.name }}</td>
                       </tr>
                       <tr>
-                          <td>Population</td>
-                          <td>{{ selected.population }}</td>
+                          <td>City</td>
+                          <td>{{ selected.city_id }}</td>
                       </tr>
                   </table>
               </div>

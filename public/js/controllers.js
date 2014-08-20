@@ -6,18 +6,18 @@
         return {}
     });
 
-    japanApp.controller('CitiesCtrl', function($scope, $http, selected) {
+    japanApp.controller('FlavoursCtrl', function($scope, $http, selected) {
 
-        $http.get('api/v1/cities').success(function(data) {
+        $http.get('api/v1/flavours').success(function(data) {
 
             $scope.predicate = 'name';
-            $scope.cities = data;
+            $scope.flavours = data;
 
-            angular.copy($scope.cities[0], selected);
+            angular.copy($scope.flavours[0], selected);
 
-            $scope.select = function(city) {
+            $scope.select = function(flavour) {
 
-                angular.copy(city, selected);
+                angular.copy(flavour, selected);
 
             };
 
