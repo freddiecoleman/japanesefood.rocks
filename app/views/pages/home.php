@@ -20,7 +20,7 @@
       </div>
       <div class="row">
           <div class="col-md-5 city-list">
-              <h3>Cities</h3>
+              <h3>Flavours</h3>
               <table class="table" ng-controller="CitiesCtrl as city">
                   <tr>
                       <th>Pic</th>
