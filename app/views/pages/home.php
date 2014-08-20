@@ -40,7 +40,7 @@
                   <table class="table">
                       <td>
                         <td colspan="2">
-                          <img ng-src="/images/{{ selected.thumbnail }}">
+                          <img ng-src="/images/{{ selected.pic }}">
                         </td>
                       </td>
                       <tr>
