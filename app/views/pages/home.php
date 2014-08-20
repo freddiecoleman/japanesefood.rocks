@@ -6,23 +6,20 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
   <script src="/js/controllers.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
   <div style="height:30px;"></div>
 
   <div class="container">
-    <div class="jumbotron">
-        <h1>Cities of Japan</h1>
-        <p>Info about the cities will be here.. you can order them and stuff... yeah AngularJS is kind of cool like that...</p>
-      </div>
       <div class="row">
           <div class="col-md-12">
               <input type="text" class="form-control" placeholder="Filter by name..." ng-model="cityName">
           </div>
       </div>
       <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 city-list">
               <h3>Cities</h3>
               <table class="table" ng-controller="CitiesCtrl as city">
                   <tr>
