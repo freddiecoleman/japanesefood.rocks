@@ -15,7 +15,7 @@
   <div class="container">
       <div class="row">
           <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Filter by name..." ng-model="cityName">
+              <input type="text" class="form-control" placeholder="Search..." ng-model="cityName">
           </div>
       </div>
       <div class="row">
