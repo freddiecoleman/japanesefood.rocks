@@ -28,7 +28,7 @@
                       <th ng-click="predicate='city'">City</th>
                   </tr>
                   <tr ng-repeat="flavour in flavours | orderBy:predicate | filter:searchBox" ng-click="select(flavour)">
-                      <td><img ng-src="/images/{{ flavour.thumbnail }}"></td>
+                      <td><img ng-src="/images/thumbs/{{ flavour.thumbnail }}"></td>
                       <td>{{ flavour.name }}</td>
                       <td>{{ flavour.city_id | number }}</td>
                   </tr>
@@ -38,11 +38,11 @@
               <h3>Info</h3>
               <div ng-controller="SelectedCtrl as info">
                   <table class="table">
-                      <td>
-                        <td colspan="2">
-                          <img ng-src="/images/{{ selected.pic }}">
-                        </td>
-                      </td>
+                      <tr>
+                          <td colspan="2">
+                              <img ng-src="/images/pics/{{ selected.pic }}" class="full-pic">
+                          </td>
+                      </tr>
                       <tr>
                           <td>Name</td>
                           <td>{{ selected.name }}</td>

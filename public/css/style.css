@@ -3,6 +3,10 @@ body {
     background-size: 100%;
 }
 img {
-    opacity: 0.8;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.full-pic {
+    display:block;
+    margin:0 auto;
 }
