@@ -40,7 +40,7 @@
                   <table class="table">
                       <tr>
                           <td colspan="2">
-                              <img ng-src="/images/pics/{{ selected.pic }}" class="full-pic">
+                              <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="full-pic">
                           </td>
                       </tr>
                       <tr>
