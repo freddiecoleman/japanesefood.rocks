@@ -24,8 +24,8 @@
               <table class="table" ng-controller="CitiesCtrl as city">
                   <tr>
                       <th>Pic</th>
-                      <th ng-click="predicate='name'">Name</th>
-                      <th ng-click="predicate='population'">Population</th>
+                      <th ng-click="predicate='name'">Flavour</th>
+                      <th ng-click="predicate='population'">City</th>
                   </tr>
                   <tr ng-repeat="city in cities | orderBy:predicate | filter:cityName" ng-click="select(city)">
                       <td><img ng-src="/images/{{ city.thumbnail }}"></td>
