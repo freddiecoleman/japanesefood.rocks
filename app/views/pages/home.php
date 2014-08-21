@@ -13,7 +13,7 @@
   <div class="container">
       <div class="page-header">
           <div style="float:right;"><input type="text" class="form-control" placeholder="Search..." ng-model="searchBox"></div>
-          <h1>Ramen <small>each city of Japan has its own unique flavour</small></h1>
+          <h1>Ramen <small>each city of Japan has its own unique flavour!</small></h1>
       </div>
       <div class="row">
           <div class="col-md-6 city-list" ng-controller="FlavoursCtrl as flavour">
