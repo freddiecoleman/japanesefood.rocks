@@ -23,7 +23,7 @@
                           <img ng-src="/images/thumbs/{{ flavour.thumbnail }}" class="img-rounded">
                           <div class="caption ramen-thumb">
                               <h1>{{ flavour.name }}</h1>
-                              <p><small>{{ flavour.city_id | number }}</small></p>
+                              <p><small>{{ flavour.city.name }}</small></p>
                           </div>
                       </div>
                   </div>
@@ -34,7 +34,7 @@
               <div class="row" ng-controller="SelectedCtrl as info">
                   <div class="col-md-12">
                       <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="img-rounded full-pic">
-                      <h1>{{ selected.name }} <small>{{ selected.city_id }}</small></h1>
+                      <h1>{{ selected.name }} <small>{{ selected.city.name }}</small></h1>
                       <p>Text about this bad boy...</p>
                       <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
                   </div>
