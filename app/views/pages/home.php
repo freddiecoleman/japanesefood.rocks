@@ -10,15 +10,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-  <div style="height:30px;"></div>
-
   <div class="container">
-      <div class="row">
-          <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Search..." ng-model="searchBox">
-          </div>
-      </div>
       <div class="row">
           <div class="col-md-5 city-list">
               <h3>Flavours</h3>
@@ -57,7 +49,11 @@
               </div>
           </div>
       </div>
-
+      <div class="row">
+          <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Search..." ng-model="searchBox">
+          </div>
+      </div>
 
   </div>
 
