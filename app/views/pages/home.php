@@ -28,12 +28,13 @@
                       <th ng-click="predicate='name'">Flavour</th>
                       <th ng-click="predicate='city'">City</th>
                   </tr>
-                  <tr ng-repeat="flavour in flavours | orderBy:predicate | filter:searchBox" ng-click="select(flavour)">
+                  <tr dir-paginate="flavour in flavours | itemsPerPage: 5 | filter:searchBox" ng-click="select(flavour)">
                       <td><img ng-src="/images/thumbs/{{ flavour.thumbnail }}"></td>
                       <td>{{ flavour.name }}</td>
                       <td>{{ flavour.city_id | number }}</td>
                   </tr>
               </table>
+              <dir-pagination-controls></dir-pagination-controls>
           </div>
           <div class="col-md-7">
               <h3>Info</h3>
