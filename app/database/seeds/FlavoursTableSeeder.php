@@ -13,7 +13,7 @@ class FlavoursTableSeeder extends Seeder {
         {
             Flavour::create([
                 'name'       => $faker->word,
-                'city_id' => $faker->numberBetween(1, 3),
+                'city_id' => $faker->numberBetween(1, 5),
                 'thumbnail'  => rand(1, 3) . '.jpg',
                 'pic'  => rand(1, 3) . '.jpg',
                 'created_at' => $faker->dateTime()
