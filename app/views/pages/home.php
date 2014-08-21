@@ -5,6 +5,7 @@
   <title>Document</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
   <script src="/js/controllers.js"></script>
+  <script src="/components/angular-utils-pagination/dirPagination.js"></script>
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
