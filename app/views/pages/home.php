@@ -11,25 +11,27 @@
 </head>
 <body>
   <div class="container">
+      <div class="page-header">
+          <div style="float:right;"><input type="text" class="form-control" placeholder="Search..." ng-model="searchBox"></div>
+          <h1>Ramen <small>each city has its own flavour</small></h1>
+      </div>
       <div class="row">
-          <div class="col-md-5 city-list">
-              <h3>Flavours</h3>
-              <table class="table" ng-controller="FlavoursCtrl as flavour">
-                  <tr>
-                      <th>Pic</th>
-                      <th ng-click="predicate='name'">Flavour</th>
-                      <th ng-click="predicate='city'">City</th>
-                  </tr>
-                  <tr dir-paginate="flavour in flavours | itemsPerPage: 5 | filter:searchBox" ng-click="select(flavour)">
-                      <td><img ng-src="/images/thumbs/{{ flavour.thumbnail }}"></td>
-                      <td>{{ flavour.name }}</td>
-                      <td>{{ flavour.city_id | number }}</td>
-                  </tr>
-              </table>
+          <div class="col-md-6 city-list" ng-controller="FlavoursCtrl as flavour">
+              <div class="row">
+                  <div class="col-md-3" dir-paginate="flavour in flavours | itemsPerPage: 12 | filter:searchBox" ng-click="select(flavour)">
+                      <div class="thumbnail">
+                          <img ng-src="/images/thumbs/{{ flavour.thumbnail }}">
+                          <div class="caption">
+                              <h2>{{ flavour.name }}</h2>
+                              <p>{{ flavour.city_id | number }}</p>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
               <dir-pagination-controls></dir-pagination-controls>
           </div>
-          <div class="col-md-7">
-              <h3>Info</h3>
+          <div class="col-md-6">
               <div ng-controller="SelectedCtrl as info">
                   <table class="table">
                       <tr>
@@ -49,12 +51,6 @@
               </div>
           </div>
       </div>
-      <div class="row">
-          <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Search..." ng-model="searchBox">
-          </div>
-      </div>
-
   </div>
 
   <script src="//code.jquery.com/jquery.js"></script>
