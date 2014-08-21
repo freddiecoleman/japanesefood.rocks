@@ -14,7 +14,7 @@ class CreateFlavoursTable extends Migration {
 	{
 		Schema::create('flavours', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('id')->index();
 
             $table->string('name');
             $table->unsignedInteger('city_id');
