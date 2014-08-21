@@ -13,18 +13,17 @@
   <div class="container">
       <div class="page-header">
           <div style="float:right;"><input type="text" class="form-control" placeholder="Search..." ng-model="searchBox"></div>
-          <h1>Ramen <small>each city has its own flavour</small></h1>
+          <h1>Ramen <small>each city of Japan has its own unique flavour</small></h1>
       </div>
       <div class="row">
           <div class="col-md-6 city-list" ng-controller="FlavoursCtrl as flavour">
               <div class="row">
                   <div class="col-md-3" dir-paginate="flavour in flavours | itemsPerPage: 12 | filter:searchBox" ng-click="select(flavour)">
                       <div class="thumbnail">
-                          <img ng-src="/images/thumbs/{{ flavour.thumbnail }}">
-                          <div class="caption">
-                              <h2>{{ flavour.name }}</h2>
-                              <p>{{ flavour.city_id | number }}</p>
-
+                          <img ng-src="/images/thumbs/{{ flavour.thumbnail }}" class="img-rounded">
+                          <div class="caption ramen-thumb">
+                              <h1>{{ flavour.name }}</h1>
+                              <p><small>{{ flavour.city_id | number }}</small></p>
                           </div>
                       </div>
                   </div>
@@ -32,22 +31,13 @@
               <dir-pagination-controls></dir-pagination-controls>
           </div>
           <div class="col-md-6">
-              <div ng-controller="SelectedCtrl as info">
-                  <table class="table">
-                      <tr>
-                          <td colspan="2">
-                              <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="full-pic">
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Name</td>
-                          <td>{{ selected.name }}</td>
-                      </tr>
-                      <tr>
-                          <td>City</td>
-                          <td>{{ selected.city_id }}</td>
-                      </tr>
-                  </table>
+              <div class="row" ng-controller="SelectedCtrl as info">
+                  <div class="col-md-12">
+                      <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="img-rounded full-pic">
+                      <h1>{{ selected.name }} <small>{{ selected.city_id }}</small></h1>
+                      <p>Text about this bad boy...</p>
+                      <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
+                  </div>
               </div>
           </div>
       </div>
