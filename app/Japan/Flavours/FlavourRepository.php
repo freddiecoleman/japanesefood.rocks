@@ -10,9 +10,7 @@ class FlavourRepository {
 
     public function all()
     {
-        //return Flavour::all();
-        $test = Flavour::find(1);
-        dd($test);
+        return Flavour::with('City')->get();
     }
 
 }
