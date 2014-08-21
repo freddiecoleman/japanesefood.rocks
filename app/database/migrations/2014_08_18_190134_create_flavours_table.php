@@ -17,7 +17,10 @@ class CreateFlavoursTable extends Migration {
 			$table->increments('id')->index();
 
             $table->string('name');
+
             $table->unsignedInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
+
             $table->string('thumbnail');
             $table->string('pic');
 
