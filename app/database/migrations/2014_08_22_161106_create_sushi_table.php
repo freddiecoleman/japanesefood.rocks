@@ -14,7 +14,15 @@ class CreateSushiTable extends Migration {
 	{
 		Schema::table('sushi', function(Blueprint $table)
 		{
-			//
+            $table->increments('id')->index();
+
+            $table->string('name');
+            $table->string('description');
+
+            $table->string('thumbnail');
+            $table->string('pic');
+
+            $table->timestamps();
 		});
 	}
 
@@ -27,7 +35,7 @@ class CreateSushiTable extends Migration {
 	{
 		Schema::table('sushi', function(Blueprint $table)
 		{
-			//
+            Schema::drop('sushi');
 		});
 	}
 
