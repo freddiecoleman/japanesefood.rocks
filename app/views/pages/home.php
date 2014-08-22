@@ -35,7 +35,7 @@
                   <div class="col-md-12">
                       <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="img-rounded full-pic">
                       <h1>{{ selected.name }} <small>{{ selected.city.name }}</small></h1>
-                      <p>Text about this bad boy...</p>
+                      <p>{{ selected.description }}</p>
                       <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
                   </div>
               </div>
