@@ -30,15 +30,16 @@
               </div>
               <dir-pagination-controls></dir-pagination-controls>
           </div>
-          <div class="col-md-6">
-              <div class="row" ng-controller="SelectedCtrl as info">
-                  <div class="col-md-12">
+          <div class="col-md-6" ng-controller="SelectedCtrl as info">
+              <div class="panel panel-default">
+                  <div class="panel-body">
                       <img data-ng-src="/images/pics/{{ selected.pic }}" ng-if="selected.pic" class="img-rounded full-pic">
                       <h1>{{ selected.name }} <small>{{ selected.city.name }}</small></h1>
                       <p>{{ selected.description }}</p>
                       <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
                   </div>
               </div>
+
           </div>
       </div>
   </div>
