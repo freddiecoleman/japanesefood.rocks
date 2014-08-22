@@ -89,6 +89,10 @@
     japanApp.config(['$routeProvider',
         function($routeProvider) {
             $routeProvider.
+                when('/', {
+                    templateUrl: 'partials/index.html',
+                    controller: 'IndexCtrl'
+                }).
                 when('/ramen', {
                     templateUrl: 'partials/ramen.html',
                     controller: 'RamenCtrl'
