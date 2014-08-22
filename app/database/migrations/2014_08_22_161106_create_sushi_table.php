@@ -12,7 +12,7 @@ class CreateSushiTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('sushi', function(Blueprint $table)
+		Schema::create('sushi', function(Blueprint $table)
 		{
             $table->increments('id')->index();
 
