@@ -18,7 +18,7 @@
       <div class="row">
           <div class="col-md-6 city-list" ng-controller="FlavoursCtrl as flavour">
               <div class="row">
-                  <div class="col-md-3" dir-paginate="flavour in flavours | itemsPerPage: 12 | filter:searchBox" ng-click="select(flavour)">
+                  <div class="col-md-3" ng-repeat="flavour in flavours | limitTo: 12 | filter:searchBox" ng-click="select(flavour)">
                       <div class="thumbnail">
                           <img ng-src="/images/thumbs/{{ flavour.thumbnail }}" class="img-rounded">
                           <div class="caption ramen-thumb">
