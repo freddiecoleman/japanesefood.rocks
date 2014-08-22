@@ -27,7 +27,7 @@
 
     japanApp.controller('UdonCtrl', function($scope, $http, selected) {
 
-        $http.get('api/v1/ramen').success(function(data) {
+        $http.get('api/v1/udon').success(function(data) {
 
             $scope.predicate = 'name';
             $scope.udon = data;
