@@ -8,3 +8,6 @@
 .ramen-thumb p {
     margin:0;
 }
+body {
+    background: url(/images/silver_scales.png);
+}
