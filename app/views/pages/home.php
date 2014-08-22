@@ -30,8 +30,6 @@
                 <li ng-class="getClass('/ramen')"><a href="/#/ramen">Ramen</a></li>
                 <li ng-class="getClass('/udon')"><a href="/#/udon">Udon</a></li>
                 <li ng-class="getClass('/sushi')"><a href="/#/sushi">Sushi</a></li>
-                <li ng-class="getClass('/curry')"><a href="#">Curry</a></li>
-                <li ng-class="getClass('/snacks')"><a href="#">Snacks</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
