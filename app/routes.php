@@ -8,4 +8,5 @@ Route::get('/', function()
 Route::group(['prefix' => 'api/v1'], function()
 {
     Route::resource('ramen', 'RamenController');
+    Route::resource('sushi', 'SushiController');
 });
