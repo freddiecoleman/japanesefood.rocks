@@ -4,12 +4,14 @@ class DatabaseSeeder extends Seeder {
 
     protected $tables = [
         'cities',
-        'ramen'
+        'ramen',
+        'sushi'
     ];
 
     protected $seeders = [
         'CitiesTableSeeder',
-        'RamenTableSeeder'
+        'RamenTableSeeder',
+        'SushiTableSeeder'
     ];
 
 	/**
