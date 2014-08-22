@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Udon
+            <small>like thick ramen...</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 city-list" ng-controller="UdonCtrl as flavour">
+            <div class="row">
+                <div class="col-md-3" ng-repeat="chosenUdon in udon | limitTo: 12 | filter:searchBox"
+                     ng-click="select(chosenUdon)">
+                    <div class="thumbnail">
+                        <img ng-src="/images/categories/udon/thumbs/{{ chosenUdon.thumbnail }}" width="100" height="100 class="img-rounded">
+
+                        <div class="caption chosen ramen-thumb">
+                            <h1>{{ chosenUdon.name }}</h1>
+
+                            <p>
+                                <small>{{ chosenUdon.city.name }}</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" ng-controller="SelectedCtrl as info">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img data-ng-src="/images/categories/udon/pics/{{ selected.pic }}" height="300" width="525" ng-if="selected.pic"
+                         class="img-rounded full-pic">
+
+                    <h1>{{ selected.name }}
+                        <small>{{ selected.city.name }}</small>
+                    </h1>
+                    <p>{{ selected.description }}</p>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

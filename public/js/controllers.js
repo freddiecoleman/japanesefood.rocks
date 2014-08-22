@@ -25,6 +25,25 @@
 
     });
 
+    japanApp.controller('UdonCtrl', function($scope, $http, selected) {
+
+        $http.get('api/v1/ramen').success(function(data) {
+
+            $scope.predicate = 'name';
+            $scope.udon = data;
+
+            angular.copy($scope.udon[0], selected);
+
+            $scope.select = function(udon) {
+
+                angular.copy(udon, selected);
+
+            };
+
+        });
+
+    });
+
     japanApp.controller('SushiCtrl', function($scope, $http, selected) {
 
         $http.get('api/v1/sushi').success(function(data) {
@@ -73,6 +92,10 @@
                 when('/ramen', {
                     templateUrl: 'partials/ramen.html',
                     controller: 'RamenCtrl'
+                }).
+                when('/udon', {
+                    templateUrl: 'partials/udon.html',
+                    controller: 'UdonCtrl'
                 }).
                 when('/sushi', {
                     templateUrl: 'partials/sushi.html',
