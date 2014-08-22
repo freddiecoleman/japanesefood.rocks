@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFlavoursTable extends Migration {
+class CreateRamenTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateFlavoursTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('flavours', function(Blueprint $table)
+		Schema::create('ramen', function(Blueprint $table)
 		{
 			$table->increments('id')->index();
 
@@ -36,9 +36,9 @@ class CreateFlavoursTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('flavours', function(Blueprint $table)
+		Schema::table('ramen', function(Blueprint $table)
 		{
-            Schema::drop('flavours');
+            Schema::drop('ramen');
 		});
 	}
 

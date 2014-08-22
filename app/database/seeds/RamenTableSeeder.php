@@ -1,9 +1,9 @@
 <?php
 
 use Faker\Factory as Faker;
-use Japan\Flavours\Flavour;
+use Japan\Ramen\Ramen;
 
-class FlavoursTableSeeder extends Seeder {
+class RamenTableSeeder extends Seeder {
 
     public function run()
     {
@@ -11,7 +11,7 @@ class FlavoursTableSeeder extends Seeder {
 
         foreach (range(1, 100) as $index)
         {
-            Flavour::create([
+            Ramen::create([
                 'name'        => $faker->word,
                 'description' => $faker->sentence(),
                 'city_id'     => $faker->numberBetween(1, 5),

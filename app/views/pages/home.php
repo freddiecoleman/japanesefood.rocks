@@ -57,18 +57,18 @@
         </h1>
     </div>
     <div class="row">
-        <div class="col-md-6 city-list" ng-controller="FlavoursCtrl as flavour">
+        <div class="col-md-6 city-list" ng-controller="RamenCtrl as flavour">
             <div class="row">
-                <div class="col-md-3" ng-repeat="flavour in flavours | limitTo: 12 | filter:searchBox"
-                     ng-click="select(flavour)">
+                <div class="col-md-3" ng-repeat="chosenRamen in ramen | limitTo: 12 | filter:searchBox"
+                     ng-click="select(chosenRamen)">
                     <div class="thumbnail">
-                        <img ng-src="/images/thumbs/{{ flavour.thumbnail }}" class="img-rounded">
+                        <img ng-src="/images/thumbs/{{ chosenRamen.thumbnail }}" class="img-rounded">
 
-                        <div class="caption ramen-thumb">
-                            <h1>{{ flavour.name }}</h1>
+                        <div class="caption chosen ramen-thumb">
+                            <h1>{{ chosenRamen.name }}</h1>
 
                             <p>
-                                <small>{{ flavour.city.name }}</small>
+                                <small>{{ chosenRamen.city.name }}</small>
                             </p>
                         </div>
                     </div>

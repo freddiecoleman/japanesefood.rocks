@@ -6,18 +6,18 @@
         return {}
     });
 
-    japanApp.controller('FlavoursCtrl', function($scope, $http, selected) {
+    japanApp.controller('RamenCtrl', function($scope, $http, selected) {
 
-        $http.get('api/v1/flavours').success(function(data) {
+        $http.get('api/v1/ramen').success(function(data) {
 
             $scope.predicate = 'name';
-            $scope.flavours = data;
+            $scope.ramen = data;
 
-            angular.copy($scope.flavours[0], selected);
+            angular.copy($scope.ramen[0], selected);
 
-            $scope.select = function(flavour) {
+            $scope.select = function(ramen) {
 
-                angular.copy(flavour, selected);
+                angular.copy(ramen, selected);
 
             };
 

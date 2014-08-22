@@ -5,9 +5,9 @@ class City extends \Eloquent {
 
     protected $table = 'cities';
 
-    public function flavours()
+    public function ramen()
     {
-        return $this->hasMany('Flavour');
+        return $this->hasMany('Ramen');
     }
 
 }

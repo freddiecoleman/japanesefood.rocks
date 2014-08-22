@@ -7,5 +7,5 @@ Route::get('/', function()
 
 Route::group(['prefix' => 'api/v1'], function()
 {
-    Route::resource('flavours', 'FlavourController');
+    Route::resource('ramen', 'RamenController');
 });
