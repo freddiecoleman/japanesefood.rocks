@@ -12,11 +12,12 @@ class FlavoursTableSeeder extends Seeder {
         foreach (range(1, 100) as $index)
         {
             Flavour::create([
-                'name'       => $faker->word,
-                'city_id' => $faker->numberBetween(1, 5),
-                'thumbnail'  => rand(1, 3) . '.jpg',
-                'pic'  => rand(1, 3) . '.jpg',
-                'created_at' => $faker->dateTime()
+                'name'        => $faker->word,
+                'description' => $faker->sentence(),
+                'city_id'     => $faker->numberBetween(1, 5),
+                'thumbnail'   => rand(1, 3) . '.jpg',
+                'pic'         => rand(1, 3) . '.jpg',
+                'created_at'  => $faker->dateTime()
             ]);
         }
     }

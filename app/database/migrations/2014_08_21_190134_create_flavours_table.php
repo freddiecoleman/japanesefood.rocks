@@ -17,6 +17,7 @@ class CreateFlavoursTable extends Migration {
 			$table->increments('id')->index();
 
             $table->string('name');
+            $table->string('description');
 
             $table->unsignedInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities');
