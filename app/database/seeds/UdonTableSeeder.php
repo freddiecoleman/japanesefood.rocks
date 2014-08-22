@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Japan\Ramen\Ramen;
+use Japan\Udon\Udon;
 
 class UdonTableSeeder extends Seeder {
 
