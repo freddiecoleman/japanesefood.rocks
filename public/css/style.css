@@ -11,3 +11,6 @@
 body {
     background: url(/images/silver_scales.png);
 }
+.thumbnail {
+    cursor:pointer;
+}
