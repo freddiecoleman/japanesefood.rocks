@@ -2,7 +2,7 @@
 <html lang="en" ng-app="japanApp">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Japanese Food</title>
     <script src="/js/lib/angular/angular.min.js"></script>
     <script src="/js/lib/angular-route/angular-route.min.js"></script>
     <script src="/js/controllers.js"></script>
