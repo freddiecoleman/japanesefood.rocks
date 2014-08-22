@@ -3,7 +3,7 @@
 use Faker\Factory as Faker;
 use Japan\Sushi\Sushi;
 
-class RamenTableSeeder extends Seeder {
+class SushiTableSeeder extends Seeder {
 
     public function run()
     {
