@@ -1,6 +1,6 @@
 (function(){
 
-    var japanApp = angular.module("japanApp", []);
+    var japanApp = angular.module("japanApp", ['ngRoute']);
 
     japanApp.factory('selected', function() {
         return {}
@@ -30,5 +30,17 @@
         $scope.selected = selected;
 
     });
+
+    japanApp.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                when('/ramen', {
+                    templateUrl: 'partials/ramen.html',
+                    controller: 'RamenCtrl'
+                }).
+                otherwise({
+                    redirectTo: '/'
+                });
+        }]);
 
 })();
