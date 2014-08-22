@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl as navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -27,11 +27,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/#/ramen">Ramen</a></li>
-                <li><a href="/#/ramen">Udon</a></li>
-                <li><a href="/#/sushi">Sushi</a></li>
-                <li><a href="#">Curry</a></li>
-                <li><a href="#">Snacks</a></li>
+                <li ng-class="getClass('/ramen')"><a href="/#/ramen">Ramen</a></li>
+                <li ng-class="getClass('/udon')"><a href="/#/udon">Udon</a></li>
+                <li ng-class="getClass('/sushi')"><a href="/#/sushi">Sushi</a></li>
+                <li ng-class="getClass('/curry')"><a href="#">Curry</a></li>
+                <li ng-class="getClass('/snacks')"><a href="#">Snacks</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
