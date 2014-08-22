@@ -1,6 +1,6 @@
 (function(){
 
-    var japanApp = angular.module("japanApp", ['angularUtils.directives.dirPagination']);
+    var japanApp = angular.module("japanApp", []);
 
     japanApp.factory('selected', function() {
         return {}
