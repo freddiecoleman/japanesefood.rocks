@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="/js/lib/angular/angular.min.js"></script>
+    <script src="/js/lib/angular-route/angular-route.min.js"></script>
     <script src="/js/controllers.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
