@@ -10,7 +10,6 @@
 }
 body {
     background: url(/images/silver_scales.png);
-    margin-bottom: 60px;
 }
 .thumbnail {
     cursor:pointer;
