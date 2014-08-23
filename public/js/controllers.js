@@ -50,6 +50,12 @@
 
         });
 
+    })
+    .directive('pagination', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/pagination.html'
+        };
     });
 
     japanApp.controller('UdonCtrl', function($scope, $http, selected) {
