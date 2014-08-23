@@ -22,17 +22,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="pagination">
                     <ul class="pager">
                         <li ng-class="prevPageDisabled()">
-                            <a href ng-click="prevPage()">« Prev</a>
+                            <a href ng-click="prevPage()">&larr; Prev</a>
                         </li>
                         <li ng-repeat="n in range()"
                             ng-class="{active: n == currentPage}" ng-click="setPage(n)">
                             <a href="#">{{n+1}}</a>
                         </li>
                         <li ng-class="nextPageDisabled()">
-                            <a href ng-click="nextPage()">Next »</a>
+                            <a href ng-click="nextPage()">Next &rarr;</a>
                         </li>
                     </ul>
                 </div>
