@@ -13,12 +13,39 @@
             $scope.predicate = 'name';
             $scope.ramen = data;
 
+            $scope.itemsPerPage = 12;
+            $scope.currentPage = 0;
+
             angular.copy($scope.ramen[0], selected);
 
             $scope.select = function(ramen) {
 
                 angular.copy(ramen, selected);
 
+            };
+
+            $scope.prevPage = function() {
+                if ($scope.currentPage > 0) {
+                    $scope.currentPage--;
+                }
+            };
+
+            $scope.prevPageDisabled = function() {
+                return $scope.currentPage === 0 ? "disabled" : "";
+            };
+
+            $scope.pageCount = function() {
+                return Math.ceil($scope.ramen.length/$scope.itemsPerPage)-1;
+            };
+
+            $scope.nextPage = function() {
+                if ($scope.currentPage < $scope.pageCount()) {
+                    $scope.currentPage++;
+                }
+            };
+
+            $scope.nextPageDisabled = function() {
+                return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
             };
 
         });
@@ -67,7 +94,7 @@
 
         $scope.getClass = function(path) {
             var cur_path = $location.path().substr(0, path.length);
-   
+
             if (cur_path == path) {
                 if($location.path().substr(0).length > 1 && path.length == 1 )
                     return "";
@@ -109,5 +136,12 @@
                     redirectTo: '/'
                 });
         }]);
+
+    japanApp.filter('offset', function() {
+        return function(input, start) {
+            start = parseInt(start, 10);
+            return input.slice(start);
+        };
+    });
 
 })();
