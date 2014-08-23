@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-6 city-list">
             <div class="row">
-                <div class="col-md-3" ng-repeat="chosenSushi in sushi |
+                <div class="col-md-3" ng-repeat="chosenSushi in food |
                 offset: currentPage*itemsPerPage |
                 limitTo: itemsPerPage" ng-click="select(chosenSushi)">
                     <div class="thumbnail">

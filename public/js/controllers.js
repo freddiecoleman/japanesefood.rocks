@@ -6,21 +6,23 @@
         return {}
     });
 
-    japanApp.controller('RamenCtrl', function($scope, $http, selected) {
+    japanApp.controller('FoodCtrl', function($scope, $location, $http, selected) {
 
-        $http.get('api/v1/ramen').success(function(data) {
+        console.log($location.url());
+
+        $http.get('api/v1'+$location.url()).success(function(data) {
 
             $scope.predicate = 'name';
-            $scope.ramen = data;
+            $scope.food = data;
 
             $scope.itemsPerPage = 12;
             $scope.currentPage = 0;
 
-            angular.copy($scope.ramen[0], selected);
+            angular.copy($scope.food[0], selected);
 
-            $scope.select = function(ramen) {
+            $scope.select = function(food) {
 
-                angular.copy(ramen, selected);
+                angular.copy(food, selected);
 
             };
 
@@ -35,7 +37,7 @@
             };
 
             $scope.pageCount = function() {
-                return Math.ceil($scope.ramen.length/$scope.itemsPerPage)-1;
+                return Math.ceil($scope.food.length/$scope.itemsPerPage)-1;
             };
 
             $scope.nextPage = function() {
@@ -62,98 +64,6 @@
             restrict: 'E',
             templateUrl: 'partials/navigation.html'
         };
-    });
-
-    japanApp.controller('UdonCtrl', function($scope, $http, selected) {
-
-        $http.get('api/v1/udon').success(function(data) {
-
-            $scope.predicate = 'name';
-            $scope.udon = data;
-
-            $scope.itemsPerPage = 12;
-            $scope.currentPage = 0;
-
-            angular.copy($scope.udon[0], selected);
-
-            $scope.select = function(udon) {
-
-                angular.copy(udon, selected);
-
-            };
-
-            $scope.prevPage = function() {
-                if ($scope.currentPage > 0) {
-                    $scope.currentPage--;
-                }
-            };
-
-            $scope.prevPageDisabled = function() {
-                return $scope.currentPage === 0 ? "disabled" : "";
-            };
-
-            $scope.pageCount = function() {
-                return Math.ceil($scope.udon.length/$scope.itemsPerPage)-1;
-            };
-
-            $scope.nextPage = function() {
-                if ($scope.currentPage < $scope.pageCount()) {
-                    $scope.currentPage++;
-                }
-            };
-
-            $scope.nextPageDisabled = function() {
-                return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
-            };
-
-        });
-
-    });
-
-    japanApp.controller('SushiCtrl', function($scope, $http, selected) {
-
-        $http.get('api/v1/sushi').success(function(data) {
-
-            $scope.predicate = 'name';
-            $scope.sushi = data;
-
-            $scope.itemsPerPage = 12;
-            $scope.currentPage = 0;
-
-            angular.copy($scope.sushi[0], selected);
-
-            $scope.select = function(sushi) {
-
-                angular.copy(sushi, selected);
-
-            };
-
-            $scope.prevPage = function() {
-                if ($scope.currentPage > 0) {
-                    $scope.currentPage--;
-                }
-            };
-
-            $scope.prevPageDisabled = function() {
-                return $scope.currentPage === 0 ? "disabled" : "";
-            };
-
-            $scope.pageCount = function() {
-                return Math.ceil($scope.sushi.length/$scope.itemsPerPage)-1;
-            };
-
-            $scope.nextPage = function() {
-                if ($scope.currentPage < $scope.pageCount()) {
-                    $scope.currentPage++;
-                }
-            };
-
-            $scope.nextPageDisabled = function() {
-                return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
-            };
-
-        });
-
     });
 
     japanApp.controller('NavCtrl', function($scope, $location) {
@@ -188,15 +98,15 @@
                 }).
                 when('/ramen', {
                     templateUrl: 'partials/ramen.html',
-                    controller: 'RamenCtrl'
+                    controller: 'FoodCtrl'
                 }).
                 when('/udon', {
                     templateUrl: 'partials/udon.html',
-                    controller: 'UdonCtrl'
+                    controller: 'FoodCtrl'
                 }).
                 when('/sushi', {
                     templateUrl: 'partials/sushi.html',
-                    controller: 'SushiCtrl'
+                    controller: 'FoodCtrl'
                 }).
                 otherwise({
                     redirectTo: '/'
