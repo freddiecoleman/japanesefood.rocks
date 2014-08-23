@@ -14,3 +14,7 @@ body {
 .thumbnail {
     cursor:pointer;
 }
+.pagination {
+    margin:0 auto;
+    display:block;
+}
