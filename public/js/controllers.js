@@ -84,12 +84,39 @@
             $scope.predicate = 'name';
             $scope.sushi = data;
 
+            $scope.itemsPerPage = 12;
+            $scope.currentPage = 0;
+
             angular.copy($scope.sushi[0], selected);
 
             $scope.select = function(sushi) {
 
                 angular.copy(sushi, selected);
 
+            };
+
+            $scope.prevPage = function() {
+                if ($scope.currentPage > 0) {
+                    $scope.currentPage--;
+                }
+            };
+
+            $scope.prevPageDisabled = function() {
+                return $scope.currentPage === 0 ? "disabled" : "";
+            };
+
+            $scope.pageCount = function() {
+                return Math.ceil($scope.sushi.length/$scope.itemsPerPage)-1;
+            };
+
+            $scope.nextPage = function() {
+                if ($scope.currentPage < $scope.pageCount()) {
+                    $scope.currentPage++;
+                }
+            };
+
+            $scope.nextPageDisabled = function() {
+                return $scope.currentPage === $scope.pageCount() ? "disabled" : "";
             };
 
         });
