@@ -56,6 +56,12 @@
             restrict: 'E',
             templateUrl: 'partials/pagination.html'
         };
+    })
+    .directive('topNav', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/navigation.html'
+        };
     });
 
     japanApp.controller('UdonCtrl', function($scope, $http, selected) {
