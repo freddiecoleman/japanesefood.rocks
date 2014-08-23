@@ -14,6 +14,12 @@
 
 <div ng-view></div>
 
+<div class="footer">
+    <div class="foot-container">
+        <p class="text-muted">Built by <a href="http://freddiecoleman.com">Freddie Coleman</a>.</p>
+    </div>
+</div>
+
 <script src="//code.jquery.com/jquery.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
