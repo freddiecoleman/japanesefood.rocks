@@ -8,8 +8,6 @@
 
     japanApp.controller('FoodCtrl', function($scope, $location, $http, selected) {
 
-        console.log($location.url());
-
         $http.get('api/v1'+$location.url()).success(function(data) {
 
             $scope.predicate = 'name';
