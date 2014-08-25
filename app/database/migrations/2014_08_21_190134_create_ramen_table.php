@@ -18,7 +18,7 @@ class CreateRamenTable extends Migration {
 
             $table->string('name');
             $table->string('name_jp');
-            
+
             $table->string('description');
 
             $table->unsignedInteger('city_id');

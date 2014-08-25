@@ -13,6 +13,7 @@ class CitiesTableSeeder extends Seeder {
         {
             City::create([
                 'name'       => $faker->word,
+                'name_jp'       => $faker->word,
                 'created_at' => $faker->dateTime()
             ]);
         }

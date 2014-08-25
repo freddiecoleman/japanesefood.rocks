@@ -13,6 +13,7 @@ class UdonTableSeeder extends Seeder {
         {
             Udon::create([
                 'name'        => $faker->word,
+                'name_jp'        => $faker->word,
                 'description' => $faker->sentence(),
                 'city_id'     => $faker->numberBetween(1, 5),
                 'thumbnail'   => rand(1, 3) . '.jpg',

@@ -13,6 +13,7 @@ class SushiTableSeeder extends Seeder {
         {
             Sushi::create([
                 'name'        => $faker->word,
+                'name_jp'        => $faker->word,
                 'description' => $faker->sentence(),
                 'thumbnail'   => rand(1, 3) . '.jpg',
                 'pic'         => rand(1, 3) . '.jpg',
