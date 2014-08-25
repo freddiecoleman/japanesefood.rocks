@@ -4,7 +4,6 @@
 .env.*.php
 .env.php
 .idea/
-vendor/
 node_modules/
 npm-debug.log
 bower_components/
