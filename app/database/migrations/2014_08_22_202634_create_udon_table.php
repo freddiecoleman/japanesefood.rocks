@@ -40,7 +40,7 @@ class CreateUdonTable extends Migration {
 	{
 		Schema::table('udon', function(Blueprint $table)
 		{
-            Schema::drop('ramen');
+            Schema::drop('udon');
 		});
 	}
 
