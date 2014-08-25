@@ -17,6 +17,7 @@ class CreateCitiesTable extends Migration {
             $table->increments('id')->index();
 
             $table->string('name');
+            $table->string('name_jp');
 
             $table->timestamps();
         });

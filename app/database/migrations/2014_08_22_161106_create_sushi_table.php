@@ -17,6 +17,8 @@ class CreateSushiTable extends Migration {
             $table->increments('id')->index();
 
             $table->string('name');
+            $table->string('name_jp');
+
             $table->string('description');
 
             $table->string('thumbnail');
