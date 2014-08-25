@@ -16,10 +16,6 @@ An online database of Japanese food built using Laravel and AngularJS.
 
 [http://japanesefood.rocks](http://japanesefood.rocks)
 
-## Credits
+### Credits
 
-Built by Freddie Coleman
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Built by Freddie Coleman, all code is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
