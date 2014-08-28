@@ -5,9 +5,9 @@
         </h1>
     </div>
     <div class="row">
-        <div class="col-md-6 city-list">
+        <div class="col-md-6 col-xs-6 city-list">
             <div class="row">
-                <div class="col-md-3" ng-repeat="chosenRamen in food |
+                <div class="col-md-3 col-xs-6" ng-repeat="chosenRamen in food |
                     offset: currentPage*itemsPerPage |
                     limitTo: itemsPerPage" ng-click="select(chosenRamen)">
                     <div class="thumbnail">
@@ -25,7 +25,7 @@
             </div>
             <pagination></pagination>
         </div>
-        <div class="col-md-6" ng-controller="SelectedCtrl as info">
+        <div class="col-md-6 col-xs-6" ng-controller="SelectedCtrl as info">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <img data-ng-src="/images/categories/ramen/pics/{{ selected.pic }}" height="300" width="525" ng-if="selected.pic"

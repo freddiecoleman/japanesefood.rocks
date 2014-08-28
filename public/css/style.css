@@ -19,8 +19,7 @@ body {
     display:block;
 }
 .footer {
-    position: absolute;
-    bottom: 0;
+    padding:15px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
@@ -29,8 +28,4 @@ body {
 .foot-container {
     width: auto;
     max-width: 680px;
-    padding: 0 15px;
-}
-.foot-container .text-muted {
-    margin: 20px 0;
 }
