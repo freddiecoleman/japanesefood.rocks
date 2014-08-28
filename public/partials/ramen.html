@@ -4,14 +4,30 @@
             <small>each city of Japan has its own unique flavour!</small>
         </h1>
     </div>
+    <div class="row visible-xs" ng-controller="SelectedCtrl as info">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img data-ng-src="/images/categories/ramen/pics/{{ selected.pic }}" ng-if="selected.pic"
+                         class="img-responsive img-rounded full-pic">
+
+                    <h1>{{ selected.name }}
+                        <small>{{ selected.city.name }}</small>
+                    </h1>
+                    <p>{{ selected.description }}</p>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Buy now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-6 col-xs-6 city-list">
+        <div class="col-md-6 col-sm-6 col-xs-12 city-list">
             <div class="row">
-                <div class="col-md-3 col-xs-6" ng-repeat="chosenRamen in food |
+                <div class="col-md-3 col-xs-4" ng-repeat="chosenRamen in food |
                     offset: currentPage*itemsPerPage |
                     limitTo: itemsPerPage" ng-click="select(chosenRamen)">
                     <div class="thumbnail">
-                        <img ng-src="/images/categories/ramen/thumbs/{{ chosenRamen.thumbnail }}" width="100" height="100 class="img-rounded">
+                        <img ng-src="/images/categories/ramen/thumbs/{{ chosenRamen.thumbnail }}" class="img-responsive img-rounded">
 
                         <div class="caption chosen ramen-thumb">
                             <h1>{{ chosenRamen.name }}</h1>
@@ -25,11 +41,11 @@
             </div>
             <pagination></pagination>
         </div>
-        <div class="col-md-6 col-xs-6" ng-controller="SelectedCtrl as info">
+        <div class="col-md-6 col-sm-6 hidden-xs" ng-controller="SelectedCtrl as info">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <img data-ng-src="/images/categories/ramen/pics/{{ selected.pic }}" height="300" width="525" ng-if="selected.pic"
-                         class="img-rounded full-pic">
+                    <img data-ng-src="/images/categories/ramen/pics/{{ selected.pic }}" ng-if="selected.pic"
+                         class="img-responsive img-rounded full-pic">
 
                     <h1>{{ selected.name }}
                         <small>{{ selected.city.name }}</small>
