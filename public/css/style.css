@@ -29,3 +29,9 @@ body {
     width: auto;
     max-width: 680px;
 }
+.marketing {
+    text-align:center;
+}
+.marketing h1 {
+    margin-bottom:40px;
+}
