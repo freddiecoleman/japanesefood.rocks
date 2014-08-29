@@ -15,9 +15,37 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ng-class="getClass('/ramen')"><a href="/!#/ramen">Ramen</a></li>
-                <li ng-class="getClass('/udon')"><a href="/!#/udon">Udon</a></li>
-                <li ng-class="getClass('/sushi')"><a href="/!#/sushi">Sushi</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Noodles <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-class="getClass('/ramen')"><a href="/!#/ramen">Ramen</a></li>
+                        <li ng-class="getClass('/udon')"><a href="/!#/udon">Udon</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seafood <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-class="getClass('/sushi')"><a href="/!#/sushi">Sushi</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/sashimi">Sashimi</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More food <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-class="getClass('/sushi')"><a href="/!#/curry">Curry</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/okonomiyaki">Okonomiyaki</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/tonkatsu">Tonkatsu</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/Gyoza">Gyoza</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drinks <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-class="getClass('/sushi')"><a href="/!#/greentea">Green tea</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/beer">Beer</a></li>
+                        <li ng-class="getClass('/sashimi')"><a href="/!#/sake">Sake</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
