@@ -106,11 +106,11 @@
                     controller: 'FoodCtrl'
                 }).
                 when('/udon', {
-                    templateUrl: 'partials/udon.html',
+                    templateUrl: 'partials/category.html',
                     controller: 'FoodCtrl'
                 }).
                 when('/sushi', {
-                    templateUrl: 'partials/sushi.html',
+                    templateUrl: 'partials/category.html',
                     controller: 'FoodCtrl'
                 }).
                 otherwise({
