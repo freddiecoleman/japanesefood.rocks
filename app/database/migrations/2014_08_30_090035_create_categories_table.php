@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration {
 			$table->increments('id');
 
             $table->string('name');
+            $table->mediumText('intro');
             $table->mediumText('description');
             $table->integer('parent_id');
             $table->string('thumbnail');
