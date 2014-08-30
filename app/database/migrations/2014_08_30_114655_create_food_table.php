@@ -15,6 +15,8 @@ class CreateFoodTable extends Migration {
 		Schema::create('food', function(Blueprint $table)
 		{
             $table->increments('id')->index();
+
+            $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
 
             $table->string('name');
