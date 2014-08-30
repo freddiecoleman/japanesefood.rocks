@@ -8,7 +8,7 @@
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <img data-ng-src="/images/categories{{ url }}/pics/{{ selected.pic }}" ng-if="selected.pic"
+                    <img data-ng-src="/images/pics/{{ selected.category_id }}/large/{{ selected.pic }}" ng-if="selected.pic"
                          class="img-responsive img-rounded full-pic">
 
                     <h1>{{ selected.name }}
@@ -27,7 +27,7 @@
                     offset: currentPage*itemsPerPage |
                     limitTo: itemsPerPage" ng-click="select(chosenFood)">
                     <div class="thumbnail">
-                        <img ng-src="/images/categories{{ url }}/thumbs/{{ chosenFood.thumbnail }}" class="img-responsive img-rounded">
+                        <img ng-src="/images/pics/{{ chosenFood.category_id }}/thumb/{{ chosenFood.thumbnail }}" class="img-responsive img-rounded">
 
                         <div class="caption chosen food-thumb">
                             <h1>{{ chosenFood.name }}</h1>
@@ -44,7 +44,7 @@
         <div class="col-md-6 col-sm-6 hidden-xs" ng-controller="SelectedCtrl as info">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <img data-ng-src="/images/categories{{ url }}/pics/{{ selected.pic }}" ng-if="selected.pic"
+                    <img data-ng-src="/images/pics/{{ selected.category_id }}/large/{{ selected.pic }}" ng-if="selected.pic"
                          class="img-responsive img-rounded full-pic">
 
                     <h1>{{ selected.name }}
