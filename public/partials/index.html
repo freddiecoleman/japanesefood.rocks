@@ -7,64 +7,10 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-4" ng-repeat="category in categories">
-            <a href="/!#/ramen"><img class="img-circle" src="/images/ramen.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
+        <div class="col-lg-4 cat" ng-repeat="category in categories">
+            <a href="/!#/{{ category.name | lowercase }}"><img class="img-circle" src="/images/categories/{{ category.id }}.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
             <h2>{{ category.name }}</h2>
             <p>{{ category.description }}</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <a href="/!#/ramen"><img class="img-circle" src="/images/ramen.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Ramen</h2>
-            <p>Each region of Japan has it's own flavour of ramen. From the thick miso ramen of Hokkaido to the cloudy white tonkotsu ramen of Kyushuu.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/udon"><img class="img-circle" src="/images/udon.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Udon</h2>
-            <p>Udon can be served hot or cold and different toppings are used at different times of year. Like ramen there are different flavours of ramen from each region of Japan.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/sushi"><img class="img-circle" src="/images/sushi.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Sushi</h2>
-            <p>The key to sushi is the vinegar flavoured rice. There are many different toppings; often raw seafood. Many types of sushi cannot be found outside of Japan.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <a href="/!#/ramen"><img class="img-circle" src="/images/ramen.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Sashimi</h2>
-            <p>Each region of Japan has it's own flavour of ramen. From the thick miso ramen of Hokkaido to the cloudy white tonkotsu ramen of Kyushuu.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/udon"><img class="img-circle" src="/images/udon.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Curry</h2>
-            <p>Udon can be served hot or cold and different toppings are used at different times of year. Like ramen there are different flavours of ramen from each region of Japan.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/sushi"><img class="img-circle" src="/images/sushi.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Okonomiyaki</h2>
-            <p>The key to sushi is the vinegar flavoured rice. There are many different toppings; often raw seafood. Many types of sushi cannot be found outside of Japan.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <a href="/!#/ramen"><img class="img-circle" src="/images/ramen.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Green tea</h2>
-            <p>Each region of Japan has it's own flavour of ramen. From the thick miso ramen of Hokkaido to the cloudy white tonkotsu ramen of Kyushuu.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/udon"><img class="img-circle" src="/images/udon.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Beer</h2>
-            <p>Udon can be served hot or cold and different toppings are used at different times of year. Like ramen there are different flavours of ramen from each region of Japan.</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="/!#/sushi"><img class="img-circle" src="/images/sushi.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;"></a>
-            <h2>Sake</h2>
-            <p>The key to sushi is the vinegar flavoured rice. There are many different toppings; often raw seafood. Many types of sushi cannot be found outside of Japan.</p>
         </div>
     </div>
 
