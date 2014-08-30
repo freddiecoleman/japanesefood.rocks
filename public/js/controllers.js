@@ -10,6 +10,7 @@
 
         $http.get('api/v1'+$location.url()).success(function(data) {
 
+            $scope.url = $location.url();
             $scope.predicate = 'name';
             $scope.food = data;
 
@@ -101,7 +102,7 @@
                     controller: 'IndexCtrl'
                 }).
                 when('/ramen', {
-                    templateUrl: 'partials/ramen.html',
+                    templateUrl: 'partials/category.html',
                     controller: 'FoodCtrl'
                 }).
                 when('/udon', {

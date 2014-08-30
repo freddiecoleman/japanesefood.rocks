@@ -1,11 +1,11 @@
-.ramen-thumb {
+.food-thumb {
     text-align:center;
 }
-.ramen-thumb h1 {
+.food-thumb h1 {
     font-size: 12px;
     margin:0 0 5px;
 }
-.ramen-thumb p {
+.food-thumb p {
     margin:0;
 }
 body {
