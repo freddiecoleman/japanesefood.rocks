@@ -7,7 +7,8 @@ class DatabaseSeeder extends Seeder {
         'ramen',
         'udon',
         'sushi',
-        'categories'
+        'categories',
+        'food'
     ];
 
     protected $seeders = [
@@ -15,7 +16,8 @@ class DatabaseSeeder extends Seeder {
         'RamenTableSeeder',
         'UdonTableSeeder',
         'SushiTableSeeder',
-        'CategoriesTableSeeder'
+        'CategoriesTableSeeder',
+        'FoodTableSeeder'
     ];
 
 	/**
