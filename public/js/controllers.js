@@ -64,7 +64,13 @@
         };
     });
 
-    japanApp.controller('NavCtrl', function($scope, $location) {
+    japanApp.controller('NavCtrl', function($scope, $location, $http) {
+
+        $http.get('api/v1/categories').success(function(data) {
+
+            $scope.navigation = data;
+
+        });
 
         $scope.getClass = function(path) {
             var cur_path = $location.path().substr(0, path.length);
