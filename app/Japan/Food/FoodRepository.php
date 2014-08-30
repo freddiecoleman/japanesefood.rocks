@@ -18,7 +18,7 @@ class FoodRepository {
     {
         $category = Category::where('name', '=', $name)->firstOrFail();
 
-        return Food::where('category_id', '=', $category->id)->with('City')->get();
+        return Food::where('category_id', '=', $category->id)->with('City', 'Category')->get();
 
     }
 

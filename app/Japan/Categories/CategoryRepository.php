@@ -63,4 +63,9 @@ class CategoryRepository {
         return Category::where('parent_id', '!=', 0)->get();
     }
 
+    public function categoryWhereNameIs($name)
+    {
+        return Category::where('name', '=', $name)->get();
+    }
+
 }
