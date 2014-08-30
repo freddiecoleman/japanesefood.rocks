@@ -26,6 +26,14 @@ class CategoriesTableSeeder extends Seeder {
         ]);
 
         Category::create([
+            'name'        => 'More food',
+            'description' => '',
+            'parent_id'   => 0,
+            'thumbnail'   => '',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
             'name'        => 'Ramen',
             'description' => 'Each region of Japan has it\'s own flavour of ramen. From the thick miso ramen of Hokkaido to the cloudy white tonkotsu ramen of Kyushuu.',
             'parent_id'   => Category::where('name', '=', 'Noodles')->firstOrFail()->id,
@@ -45,7 +53,47 @@ class CategoriesTableSeeder extends Seeder {
             'name'        => 'Sushi',
             'description' => 'The key to sushi is the vinegar flavoured rice. There are many different toppings; often raw seafood. Many types of sushi cannot be found outside of Japan.',
             'parent_id'   => Category::where('name', '=', 'Seafood')->firstOrFail()->id,
-            'thumbnail'   => 'seafood.jpg',
+            'thumbnail'   => 'sushi.jpg',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
+            'name'        => 'Sashimi',
+            'description' => 'Le raw fish, unlike sushi it doesn\'t require rice.',
+            'parent_id'   => Category::where('name', '=', 'Seafood')->firstOrFail()->id,
+            'thumbnail'   => 'sashimi.jpg',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
+            'name'        => 'Curry',
+            'description' => 'sou desu ka',
+            'parent_id'   => Category::where('name', '=', 'More food')->firstOrFail()->id,
+            'thumbnail'   => 'curry.jpg',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
+            'name'        => 'Okonomiyaki',
+            'description' => 'sou desu ka',
+            'parent_id'   => Category::where('name', '=', 'More food')->firstOrFail()->id,
+            'thumbnail'   => 'okonomiyaki.jpg',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
+            'name'        => 'Tonkatsu',
+            'description' => 'sou desu ka',
+            'parent_id'   => Category::where('name', '=', 'More food')->firstOrFail()->id,
+            'thumbnail'   => 'tonkatsu.jpg',
+            'created_at'  => $faker->dateTime()
+        ]);
+
+        Category::create([
+            'name'        => 'Gyoza',
+            'description' => 'sou desu ka',
+            'parent_id'   => Category::where('name', '=', 'More food')->firstOrFail()->id,
+            'thumbnail'   => 'gyoza.jpg',
             'created_at'  => $faker->dateTime()
         ]);
 
