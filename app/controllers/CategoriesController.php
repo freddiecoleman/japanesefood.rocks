@@ -14,9 +14,14 @@ class CategoriesController extends BaseController {
         $this->categoryRepository = $categoryRepository;
     }
 
-    public function index()
+    public function navigation()
     {
         return $this->categoryRepository->orderedByParent();
+    }
+
+    public function categories()
+    {
+        return $this->categoryRepository->nonRootCategoryList();
     }
 
 }

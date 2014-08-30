@@ -3,11 +3,6 @@
 
 class CategoryRepository {
 
-    public function all()
-    {
-        return Category::all();
-    }
-
     public function orderedByParent()
     {
         $categories     = Category::all();
@@ -56,6 +51,16 @@ class CategoryRepository {
 
 
         return $navigation;
+    }
+
+    public function all()
+    {
+        return Category::all();
+    }
+
+    public function nonRootCategoryList()
+    {
+        return Category::where('parent_id', '!=', 0)->get();
     }
 
 }
