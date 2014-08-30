@@ -13,7 +13,5 @@ Route::get('/!', function ()
 Route::group(['prefix' => 'api/v1'], function ()
 {
     Route::resource('categories', 'CategoriesController');
-    Route::resource('ramen', 'RamenController');
-    Route::resource('sushi', 'SushiController');
-    Route::resource('udon', 'UdonController');
+    Route::resource('{name}', 'FoodController');
 });
