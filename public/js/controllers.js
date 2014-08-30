@@ -11,7 +11,9 @@
         $http.get('api/v1'+$location.url()).success(function(data) {
 
             $scope.predicate = 'name';
+            
             $scope.food = data;
+            $scope.info = data[0].category.intro;
 
             $scope.itemsPerPage = 12;
             $scope.currentPage = 0;
