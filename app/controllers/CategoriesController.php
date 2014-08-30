@@ -16,7 +16,7 @@ class CategoriesController extends BaseController {
 
     public function index()
     {
-        return $this->categoryRepository->all();
+        return $this->categoryRepository->orderedByParent();
     }
 
 }

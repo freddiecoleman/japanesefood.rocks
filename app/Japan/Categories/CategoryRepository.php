@@ -8,4 +8,9 @@ class CategoryRepository {
         return Category::all();
     }
 
+    public function orderedByParent()
+    {
+        return Category::all();
+    }
+
 }
