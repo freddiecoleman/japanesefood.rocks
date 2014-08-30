@@ -101,15 +101,7 @@
                     templateUrl: 'partials/index.html',
                     controller: 'IndexCtrl'
                 }).
-                when('/ramen', {
-                    templateUrl: 'partials/category.html',
-                    controller: 'FoodCtrl'
-                }).
-                when('/udon', {
-                    templateUrl: 'partials/category.html',
-                    controller: 'FoodCtrl'
-                }).
-                when('/sushi', {
+                when('/:name', {
                     templateUrl: 'partials/category.html',
                     controller: 'FoodCtrl'
                 }).
