@@ -10,7 +10,7 @@ class FoodTableSeeder extends Seeder {
     {
         $faker = Faker::create();
 
-        $categories = Category::where('id', '!=', 0);
+        $categories = Category::where('parent_id', '!=', 0)->get();
 
         foreach ($categories as $category)
         {
