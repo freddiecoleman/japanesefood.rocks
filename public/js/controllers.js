@@ -87,6 +87,16 @@
 
     });
 
+    japanApp.controller('IndexCtrl', function($scope, $http) {
+
+        $http.get('api/v1/categories').success(function(data) {
+
+            $scope.categories = data;
+
+        });
+
+    });
+
     japanApp.controller('SelectedCtrl', function($scope, selected) {
 
         $scope.selected = selected;
