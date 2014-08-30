@@ -12,6 +12,6 @@ Route::get('/!', function ()
 
 Route::group(['prefix' => 'api/v1'], function ()
 {
-    Route::resource('categories', 'CategoriesController');
+    Route::resource('navigation', 'CategoriesController');
     Route::resource('{name}', 'FoodController');
 });

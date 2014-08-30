@@ -66,7 +66,7 @@
 
     japanApp.controller('NavCtrl', function($scope, $location, $http) {
 
-        $http.get('api/v1/categories').success(function(data) {
+        $http.get('api/v1/navigation').success(function(data) {
 
             $scope.navigation = data;
 
