@@ -34,7 +34,12 @@ class CategoryRepository {
                 if ($category->parent_id == $rootCategory['id'])
                 {
 
-                    $subNav[] = ['id' => $category->id, 'name' => $category->name];
+                    $subNav[] = [
+                        'id'          => $category->id,
+                        'name'        => $category->name,
+                        'description' => $category->description,
+                        'thumbnail'   => $category->thumbnail
+                    ];
 
                 }
 
