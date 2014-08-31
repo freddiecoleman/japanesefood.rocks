@@ -150,7 +150,7 @@
                     templateUrl: 'partials/admin/newCategory.html',
                     controller: 'AdminCtrl'
                 }).
-                when('/admin/category/update/:id', {
+                when('/admin/category/:id', {
                     templateUrl: 'partials/admin/editCategory.html',
                     controller: 'AdminCtrl'
                 }).
