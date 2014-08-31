@@ -16,6 +16,19 @@ class CategoryRepository {
         return $data;
     }
 
+    public function updateCategory($data)
+    {
+        $category              = Category::find($data['id']);
+        $category->name        = $data['name'];
+        $category->intro       = $data['intro'];
+        $category->description = $data['description'];
+        $category->parent_id   = $data['parent'];
+        $category->thumbnail   = 'test.jpg';
+        $category->save();
+
+        return $data;
+    }
+
     public function orderedByParent()
     {
         $categories     = Category::all();

@@ -5,6 +5,7 @@
             <h3>Update Category</h3>
 
             <form role="form" ng-submit="updateCategory()">
+                <input type="hidden" ng-model="data.id" />
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" ng-model="data.name">

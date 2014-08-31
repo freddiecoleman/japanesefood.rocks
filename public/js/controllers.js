@@ -137,6 +137,18 @@
 
         };
 
+        $scope.updateCategory = function() {
+
+            $scope.data.parent = ($scope.data.parent == null) ? 0 : $scope.data.parent;
+
+            $http.put('api/v1/categories', $scope.data).success(function () {
+
+                alert('Category updated!');
+
+            });
+
+        };
+
     });
 
     japanApp.config(['$routeProvider',

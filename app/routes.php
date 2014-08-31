@@ -17,5 +17,6 @@ Route::group(['prefix' => 'api/v1'], function ()
     Route::get('category/{id}', 'CategoriesController@category');
     Route::get('categories', 'CategoriesController@categories');
     Route::post('categories', 'CategoriesController@store');
+    Route::put('categories', 'CategoriesController@update');
     Route::resource('{name}', 'FoodController');
 });
