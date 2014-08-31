@@ -66,6 +66,18 @@
             restrict: 'E',
             templateUrl: 'partials/navigation.html'
         };
+    })
+    .directive('updateCategoriesList', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/admin/update-categories-list.html'
+        };
+    })
+    .directive('categoryNav', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/admin/category-nav.html'
+        };
     });
 
     japanApp.controller('NavCtrl', function($scope, $location, $http) {
