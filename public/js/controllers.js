@@ -109,15 +109,13 @@
 
     japanApp.controller('AdminCtrl', function($scope, $http) {
 
-        $scope.data = {};
-
         $http.get('api/v1/navigation/root').success(function(data) {
 
             $scope.rootCategories = data;
 
         });
 
-        $scope.submit = function() {
+        $scope.newCategory = function() {
 
             $scope.data.parent = ($scope.data.parent == null) ? 0 : $scope.data.parent;
 
@@ -138,8 +136,12 @@
                     templateUrl: 'partials/index.html',
                     controller: 'IndexCtrl'
                 }).
-                when('/admin', {
-                    templateUrl: 'partials/admin.html',
+                when('/admin/category/new', {
+                    templateUrl: 'partials/admin/newCategory.html',
+                    controller: 'AdminCtrl'
+                }).
+                when('/admin/category/edit/:id', {
+                    templateUrl: 'partials/admin/editCategory.html',
                     controller: 'AdminCtrl'
                 }).
                 when('/:name', {
