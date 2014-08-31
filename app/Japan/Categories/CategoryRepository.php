@@ -9,7 +9,7 @@ class CategoryRepository {
         $category->name        = $data['name'];
         $category->intro       = $data['intro'];
         $category->description = $data['description'];
-        $category->parent_id   = 1;
+        $category->parent_id   = $data['parent'];
         $category->thumbnail   = 'test.jpg';
         $category->save();
 

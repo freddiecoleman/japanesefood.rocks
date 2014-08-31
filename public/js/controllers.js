@@ -119,7 +119,7 @@
 
         $scope.submit = function() {
 
-            console.log($scope.data);
+            $scope.data.parent = ($scope.data.parent == null) ? 0 : $scope.data.parent;
 
             $http.post('api/v1/categories', $scope.data).success(function() {
 
