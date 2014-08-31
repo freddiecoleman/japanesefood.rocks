@@ -29,9 +29,14 @@ class CategoriesController extends BaseController {
         return $this->categoryRepository->orderedByParent();
     }
 
-    public function categories()
+    public function nonRootCategories()
     {
         return $this->categoryRepository->nonRootCategoryList();
+    }
+
+    public function allCategories()
+    {
+        return $this->categoryRepository->all();
     }
 
     public function category($id)
