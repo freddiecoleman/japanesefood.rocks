@@ -22,7 +22,7 @@ class CategoryRepository {
         $category->name        = $data['name'];
         $category->intro       = $data['intro'];
         $category->description = $data['description'];
-        $category->parent_id   = $data['parent'];
+        $category->parent_id   = $data['parent_id'];
         $category->thumbnail   = 'test.jpg';
         $category->save();
 
