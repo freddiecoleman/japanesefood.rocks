@@ -107,6 +107,16 @@
 
     });
 
+    japanApp.controller('AdminCtrl', function($scope, $http) {
+
+        $http.get('api/v1/navigation/root').success(function(data) {
+
+            $scope.rootCategories = data;
+
+        });
+
+    });
+
     japanApp.config(['$routeProvider',
         function($routeProvider) {
             $routeProvider.

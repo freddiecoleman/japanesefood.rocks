@@ -11,7 +11,7 @@
                 </div>
                 <div class="form-group">
                     <label for="parent">Parent</label>
-                    <select name="parent" id="parent" ng-options="color.name for color in colors">
+                    <select ng-model="parent" name="parent" id="parent" ng-options="rootCategory.name for rootCategory in rootCategories">
                         <option value="">-- No parent --</option>
                     </select>
                 </div>
