@@ -18,7 +18,7 @@ An online database of Japanese food built using Laravel and AngularJS.
 
 ## Work in progress
 
-- Improve/fix style for all screen sizes
+- Create admin control panel
 - Implement unit tests
 - Populate with real data
 
