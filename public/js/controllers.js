@@ -125,6 +125,23 @@
 
         });
 
+        $http.get('api/v1/categories/all').success(function(data) {
+
+            $scope.categories = data;
+
+        });
+
+        $scope.getClass = function(id){
+
+            var theClass = "list-group-item";
+            if(id == $routeParams.id){
+              theClass += " active";
+            }
+
+            return theClass;
+
+        };
+
         $scope.newCategory = function() {
 
             $scope.data.parent = ($scope.data.parent == null) ? 0 : $scope.data.parent;
