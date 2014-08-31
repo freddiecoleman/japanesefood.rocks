@@ -3,6 +3,19 @@
 
 class CategoryRepository {
 
+    public function createNewCategory($data)
+    {
+        $category              = new Category;
+        $category->name        = $data['name'];
+        $category->intro       = $data['intro'];
+        $category->description = $data['description'];
+        $category->parent_id   = 1;
+        $category->thumbnail   = 'test.jpg';
+        $category->save();
+
+        return $data;
+    }
+
     public function orderedByParent()
     {
         $categories     = Category::all();

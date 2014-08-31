@@ -14,6 +14,11 @@ class CategoriesController extends BaseController {
         $this->categoryRepository = $categoryRepository;
     }
 
+    public function store()
+    {
+        return $this->categoryRepository->createNewCategory(Input::all());
+    }
+
     public function navigation()
     {
         return $this->categoryRepository->orderedByParent();

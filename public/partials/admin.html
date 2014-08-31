@@ -4,10 +4,10 @@
         <div class="col-md-6">
             <h3>New Category</h3>
 
-            <form role="form">
+            <form role="form" ng-submit="submit()">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" ng-model="data.name">
                 </div>
                 <div class="form-group">
                     <label for="parent">Parent</label>
@@ -17,11 +17,11 @@
                 </div>
                 <div class="form-group">
                     <label for="intro">Intro</label>
-                    <input type="text" class="form-control" id="intro">
+                    <input type="text" class="form-control" id="intro" ng-model="data.intro">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="text" class="form-control" id="description">
+                    <input type="text" class="form-control" id="description" ng-model="data.description">
                 </div>
                 <div class="form-group">
                     <label for="thumbnail">Thumbnail</label>

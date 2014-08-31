@@ -109,11 +109,25 @@
 
     japanApp.controller('AdminCtrl', function($scope, $http) {
 
+        $scope.data = {};
+
         $http.get('api/v1/navigation/root').success(function(data) {
 
             $scope.rootCategories = data;
 
         });
+
+        $scope.submit = function() {
+
+            console.log($scope.data);
+
+            $http.post('api/v1/categories', $scope.data).success(function() {
+
+                alert('New category added!');
+
+            });
+
+        };
 
     });
 
