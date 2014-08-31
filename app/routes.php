@@ -5,11 +5,6 @@ Route::get('/', function ()
     return View::make('pages.home');
 });
 
-Route::get('/admin', function ()
-{
-    return View::make('pages.admin');
-});
-
 Route::get('/!', function ()
 {
     return View::make('pages.app');

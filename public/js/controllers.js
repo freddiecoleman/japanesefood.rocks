@@ -118,6 +118,10 @@
                     templateUrl: 'partials/category.html',
                     controller: 'FoodCtrl'
                 }).
+                when('/admin', {
+                    templateUrl: 'partials/admin.html',
+                    controller: 'AdminCtrl'
+                }).
                 otherwise({
                     redirectTo: '/'
                 });
