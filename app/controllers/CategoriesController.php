@@ -24,4 +24,9 @@ class CategoriesController extends BaseController {
         return $this->categoryRepository->nonRootCategoryList();
     }
 
+    public function rootNavigation()
+    {
+        return $this->categoryRepository->rootCategoryList();
+    }
+
 }

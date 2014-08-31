@@ -1,13 +1,35 @@
-<div class="container marketing">
+<div class="container">
 
     <div class="row">
-        <div class="col-md-12">
-            <h1>Real Japanese food</h1>
+        <div class="col-md-6">
+            <h3>New Category</h3>
 
-            <form action="">
-                <input type="text" name="category_name" />
-                <input type="text" name="category_name" />
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="parent">Parent</label>
+                    <select name="parent" id="parent" ng-options="color.name for color in colors">
+                        <option value="">-- No parent --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="intro">Intro</label>
+                    <input type="text" class="form-control" id="intro">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description">
+                </div>
+                <div class="form-group">
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="file" id="thumbnail" name="thumbnail">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
             </form>
+
         </div>
     </div>
 
