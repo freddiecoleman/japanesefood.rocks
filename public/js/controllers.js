@@ -187,6 +187,10 @@
                     templateUrl: 'partials/index.html',
                     controller: 'IndexCtrl'
                 }).
+                when('/admin/categories', {
+                    templateUrl: 'partials/admin/category-home.html',
+                    controller: 'AdminCtrl'
+                }).
                 when('/admin/category/new', {
                     templateUrl: 'partials/admin/newCategory.html',
                     controller: 'AdminCtrl'
