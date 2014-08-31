@@ -114,13 +114,13 @@
                     templateUrl: 'partials/index.html',
                     controller: 'IndexCtrl'
                 }).
-                when('/:name', {
-                    templateUrl: 'partials/category.html',
-                    controller: 'FoodCtrl'
-                }).
                 when('/admin', {
                     templateUrl: 'partials/admin.html',
                     controller: 'AdminCtrl'
+                }).
+                when('/:name', {
+                    templateUrl: 'partials/category.html',
+                    controller: 'FoodCtrl'
                 }).
                 otherwise({
                     redirectTo: '/'
