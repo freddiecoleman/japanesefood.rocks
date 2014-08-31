@@ -29,6 +29,11 @@ class CategoriesController extends BaseController {
         return $this->categoryRepository->nonRootCategoryList();
     }
 
+    public function category($id)
+    {
+        return $this->categoryRepository->categoryWhereIdIs($id);
+    }
+
     public function rootNavigation()
     {
         return $this->categoryRepository->rootCategoryList();

@@ -107,7 +107,17 @@
 
     });
 
-    japanApp.controller('AdminCtrl', function($scope, $http) {
+    japanApp.controller('AdminCtrl', function($scope, $http, $routeParams) {
+
+        if($routeParams.id != null){
+
+            $http.get('api/v1/category/'+$routeParams.id).success(function(data) {
+
+                $scope.data = data[0];
+
+            });
+
+        }
 
         $http.get('api/v1/navigation/root').success(function(data) {
 
@@ -140,7 +150,7 @@
                     templateUrl: 'partials/admin/newCategory.html',
                     controller: 'AdminCtrl'
                 }).
-                when('/admin/category/edit/:id', {
+                when('/admin/category/update/:id', {
                     templateUrl: 'partials/admin/editCategory.html',
                     controller: 'AdminCtrl'
                 }).

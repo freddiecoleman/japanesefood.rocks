@@ -86,4 +86,9 @@ class CategoryRepository {
         return Category::where('name', '=', $name)->get();
     }
 
+    public function categoryWhereIdIs($id)
+    {
+        return Category::where('id', '=', $id)->get();
+    }
+
 }

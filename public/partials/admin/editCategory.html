@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Update Category</h3>
+
+            <form role="form" ng-submit="updateCategory()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" ng-model="data.name">
+                </div>
+                <div class="form-group">
+                    <label for="parent">Parent</label>
+                    <select ng-model="data.parent" id="parent" ng-options="rootCategory.id as rootCategory.name for rootCategory in rootCategories">
+                        <option value="">-- No parent --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="intro">Intro</label>
+                    <input type="text" class="form-control" id="intro" ng-model="data.intro">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" ng-model="data.description">
+                </div>
+                <div class="form-group">
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="file" id="thumbnail">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
